@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+ 
+int main()
+{
+  int f, a, x, b, kord1, kord2;
+  std::cout << "1)" << std::endl;
+  std::cout << "Karpov Sergey Konstantinovich, 221-331"<< std::endl;
+  
+  std::cout << "2)" << std::endl;
+  std::cout << "minint=" << int(0b10000000000000000000000000000000) << ", "<< "maxint=" << int(0b01111111111111111111111111111111)<<", "<<"size of int =" << sizeof(int)<<std::endl;
+  std::cout << "minint=" << int(0b00000000000000000000000000000000) <<", "<<"maxint=" << int(0b1111111111111111111111111111111)<<", "<<"size of unsinget int =" << sizeof(unsigned int)<<std::endl;
+  std::cout << "minint=" << int(0b1000000000000000) <<", "<<"maxint=" << int(0b0111111111111111)<<", "<<"size of short =" << sizeof(short)<<std::endl;
+  std::cout << "minint=" << int(0b10000000000000000000000000000000) << ", "<< "maxint=" << int(0b01111111111111111111111111111111)<<", "<<"size of long =" << sizeof(long)<<std::endl;
+  std::cout << "minint=" << int(0b100000000000000000000000000000000000000000000000000000000000000) <<", "<<"maxint=" << int(0b0111111111111111111111111111111111111111111111111111111111111111)<<", "<<"size of long long =" << sizeof(long long)<<std::endl;
+  std::cout << "minint=" << int(0b1000000) <<", "<<"maxint=" << int(0b0111111)<<", "<<"size of char =" << sizeof(char)<<std::endl;
+  std::cout << "minint=" << int(0b1000000) <<", "<<"maxint=" << int(0b0111111)<<", "<<"size of bool =" << sizeof(bool)<<std::endl;
+  std::cout << "minint=" << int(0b100000000000000000000000000000000000000000000000000000000000000) <<", "<<"maxint=" << int(0b011111111111111111111111111111111111111111111111111111111111111)<<", "<<"size of double =" << sizeof(double)<<std::endl;
+  
+  std::cout << "3)" << std::endl;
+  std::cin >> f;
+  std::cout << "in binary " << std::bitset<16>(f) << std::endl;
+  std::cout << "in hex " << std::hex << f << std::endl;
+  std::cout << "bool " << bool(f) << std::endl;
+  std::cout << "double " << double(f) << std::endl;
+  std::cout << "char " << char(f) << std::endl;
+  
+  std::cout << "4)" << std::endl;
+  std::cin >> a;
+  std::cin >> b;
+  std::cout << "a * x = b" << std::endl;
+  std::cout << "x = b / a" << std::endl;
+  std::cout << "x = " << b / a << std::endl;
+  
+  std::cout << "5)" << std::endl;
+  std::cin >> kord1;
+  std::cin >> kord2;
+  std::cout << "Seredina otrezka: " << ((kord1 + kord2) / 2)<< std::endl;
+ 
+}
