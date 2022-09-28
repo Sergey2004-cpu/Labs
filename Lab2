@@ -1,0 +1,101 @@
+#include <iostream> 
+ 
+void task1() 
+{
+  int i, j, n;
+  std::cout << "vvedite chislo n" << std::endl;
+  std::cin >> n;
+  
+  for( int j = 0; j <= n; j ++)
+  {
+      for (int i = 0; i <= j; i++)
+      {
+          std::cout << i;
+      }
+      
+      std::cout << std::endl;
+  }
+} 
+ 
+void task2() 
+{
+  long long i, k, n, pr;
+  std::cout << "vvedite chislo n" << std::endl;
+  std::cin >> n;
+  std::cout << "1 ";
+  pr = 1;
+  for (int k=0; k <= n; k++)
+  {
+      std::cout << (pr * (n - k)) / (k+1) << " ";
+      pr = (pr * (n - k)) / (k+1);
+  }
+  std::cout << std::endl;
+}
+ 
+//функция для решения задачи 3 
+void task3() 
+{
+  std::cout << "Vvodite chisla, * - znak ostanovki" << std::endl;
+  int sm = 0, kl = 0;
+  std::string i;
+  std::cin >> i;
+  if(i == "*")
+  {
+      std::cout << 0 << std::endl;
+  }
+  else{
+  while(i != "*")
+  {
+      sm = sm + std::stoi(i);
+      kl = kl + 1;
+      std::cin >> i;
+  }
+  std::cout << (float)sm / kl << std::endl;
+  }  
+}
+ 
+/*
+//функция для решения задачи 4 
+void task2() 
+{} 
+*/
+ 
+int main() 
+{ 
+ int choice = 0;
+ while (true) // непрерывный цикл 
+ { 
+ std::cout << "Vvedite chislo ot 1 do 4" << std::endl;
+ std::cin >> choice; 
+ switch (choice) 
+ { 
+ case 1: 
+ { 
+ task1(); 
+ break;
+ } 
+ 
+  case 2: 
+ { 
+ task2(); 
+ break; 
+ } 
+ 
+ case 3: 
+ { 
+ task3(); 
+ break; 
+ } 
+ 
+ case 4:
+ {
+     std::cout << "Goodbye!" << std::endl;
+ }
+ 
+ default: 
+ { 
+ return 0; 
+ } 
+ } 
+ } 
+}
